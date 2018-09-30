@@ -28,6 +28,7 @@ public class Main {
 	peopleList.add (emp3);
 	peopleList.add (emp4);
 	peopleList.add (emp5);
+	peopleCounter = peopleList.size();
 	
 //* FILLING DATABASE OF FACTORIES*/		
 	ArrayList<Factory> factoryList = new ArrayList();
@@ -37,33 +38,69 @@ public class Main {
 	factoryList.add (fact1);
 	factoryList.add (fact2);
 	factoryList.add (fact3);
+	factoryCounter = factoryList.size();
+
 	
-	factoryCounter = factoryList.size;
-		
 	do {
-	System.out.println("Hello, my friend! Do you need information about factory (press 1) or a worker (press 2)? Exit - press 0");
-	Scanner scan = new Scanner(System.in);
-	commandReader = scan.nextInt();
-	exitChecker = commandReader;
-	if (commandReader == 1) {
-		System.out.println("Please choose the factory (Factory1 - 1? Factory2 - 2? Office1 - 3)? Exit - press 0");
-		}
-		Scanner scan2 = new Scanner(System.in);
-		int commandReader2 = scan2.nextInt();
-		if (commandReader2 == 1) {
-			System.out.println ();
-		}
-		else { if (commandReader2 == 2) {
-			String Factory.fullFactoryInformation(fact2);
+		System.out.println("Hello, my friend!");
+		System.out.println("What information would you like to get?");
+		System.out.println("About factory (1) or a worker (2)? Or press 0 to exit");
+		Scanner scan = new Scanner(System.in);
+		commandReader = scan.nextInt();
+		exitChecker = commandReader;
+		if (commandReader == 1) {
+			System.out.println("Please choose the factory:");
+			System.out.println("Factory1 - 1, Factory2 - 2, Office1 - 3. Or press 0 to exit");
+			Scanner scan2 = new Scanner(System.in);
+			int commandReader2 = scan2.nextInt();
+			if (exitChecker > 0){
+				exitChecker = commandReader2;
+			}
+			if (commandReader2 == 1) {
+			System.out.println (Factory.fullFactoryInformation(fact1));
+			}
+			else { if (commandReader2 == 2) {
+			System.out.println (Factory.fullFactoryInformation(fact2);
 			}
 			else {if (commandReader == 3) {
-			String Factory.fullFactoryInformation(fact3);
+			System.out.println (Factory.fullFactoryInformation(fact3);
 			}
 			}
 		}
-		)
+	  } else if (commandReader == 2) {
+		    System.out.println("Please choose your fighter:");
+			System.out.println("Bul'ba Taras - 1, Bul'ba Ostap - 2, Bul'ba Andrii - 3, Bryl's'ka Barbara - 4, Did Panas - 5. Or press 0 to exit");
+			Scanner scan3 = new Scanner(System.in);
+			int commandReader3 = scan3.nextInt();
+			if (exitChecker > 0){
+				exitChecker = commandReader3;
+			}
+			if (commandReader3 == 1) {
+				System.out.println (People.foolPeopleInfo("Bul'ba Taras"));
+				}
+				else { if (commandReader3 == 2) {
+					System.out.println (People.foolPeopleInfo("Bul'ba Ostap"));
+					}
+					else { if (commandReader3 == 3) {
+						System.out.println (People.foolPeopleInfo("Bul'ba Andrii"));
+						}
+						else { if (commandReader3 == 4) {
+							System.out.println (People.foolPeopleInfo("Bryl's'ka Barbara"));
+							}
+							else { if (commandReader3 == 5) {
+								System.out.println (People.foolPeopleInfo("Did Panas"));
+								}
+					}
+					}
+					}
+				}
 	  }
-	} 
-	while (exitChecker != 0);
+		System.out.println("If you need another information - press 1, or press 0 to exit");
+		Scanner scan4 = new Scanner(System.in);
+		int commandReader4 = scan4.nextInt();
+		if (exitChecker > 0){
+			exitChecker = commandReader4;
+		}
+	} while (exitChecker != 0);
   }
 }

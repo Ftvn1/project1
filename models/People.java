@@ -23,22 +23,7 @@ package project1.models;
     	this.address = address;
     	peopleQuantity++;
     }
-    public String getName(){
-    	return (this.surnameAndName);
-    }
-    public String toString(){
+    public String foolPeopleInfo(String surnameAndName){
     	return ("Name = " + this.surnameAndName + ", address: " + this.address + ", working at " + this.factory + ", home phone is " + this.homePhone);
     }
-    public int getPeopleQuantity(){
-    	return (peopleQuantity);
-    }
  }
-/*    private void changeRate(double newRate) { // Rate updating
-    	this.rate = newRate; }
-    через войдовые методы присваивать,
-    через ретурны выдавать инфу,
-toString - to output information about employee
-In the method main() create 3 objects of Employee type. 
-Input information about them. 
-Display the total hours of all workers to screen
-*/
